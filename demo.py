@@ -1,0 +1,18 @@
+# a = 10
+# b = 5
+# c = a + b
+# print(c)
+
+#decorator function
+def my_decorator(func):
+    def inner():
+        print("Before function runs")
+        func()
+        print("After function runs")
+    return inner
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
